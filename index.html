@@ -8,18 +8,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <!--<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">-->
   <link rel="stylesheet" href="/css/vue.css">
+  <style>
+    body {
+      position: absolute;
+      z-index: 1;
+      top: -1.5rem;
+      /* 这里是下拉刷新控件的高度 */
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #eee;
+      overflow: auto;
+    }
+
+    #pull_to_refresh {
+      height: 1.5rem;
+      /* 下拉刷新控件的高度 */
+      line-height: 1.5rem;
+      text-align: center;
+      color: #666;
+      font-size: 1rem;
+      padding-top: 0.25rem;
+      font-weight: bold;
+    }
+  </style>
 </head>
 
 <body>
-  <div id="app">
+  <div id="pull_to_refresh">下拉刷新...</div>
+  <div data-app id="main">
+    Loading...
   </div>
 
   <!-- init configration-->
   <script>
     window.$docsify = {
+      el: '#main',
       name: '',
       repo: '',
-      loadSidebar:true,
+      loadSidebar: true,
 
       beian: {
         ICP: "粤ICP备18004566号-2",
@@ -30,7 +57,6 @@
       }
     }
   </script>
-
   <!-- Docsify v4 -->
   <!--
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
@@ -48,7 +74,17 @@
     <!-- This is not hosted yet>
   </script>
 
-  <!--<div class="footer"><a href="http://www.beian.miit.gov.cn">粤ICP备18004566号-2</a></div>-->
+  <script src="/js/iscroll.js"></script>
+  <script src="/js/iscroll-refresh.js"></script>
+  <script>
+    // 初始化下拉刷新
+    var myScroll = new IScroll('body');
+    pullToRefresh(myScroll, function() {
+      // 这里是刷新数据的回调函数
+      location.reload();
+    });
+  </script>
+
 </body>
 
 </html>
