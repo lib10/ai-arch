@@ -1,0 +1,123 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <title>八卦预测</title>
+  <!-- v-cloak -->
+  <style type="text/css">
+    [v-cloak] {
+      display: none !important;
+    }
+  </style>
+  <!-- end for v-cloak -->
+
+  <style type="text/css">
+    .swal-input-bottom {
+      margin-bottom: 0px !important;
+      font-size: 1rem !important;
+    }
+
+    .swal-btn-size {
+      font-size: 0.8rem !important;
+    }
+
+    .swal2-popup .swal2-validation-message {
+      background: #d0d0d0;
+      width: 100% !important;
+      margin-left: -12px !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app" v-vloak>
+    <div> 八卦预测，仅供测试与娱乐用途.</div>
+    <p/>
+
+    <div>朱熹八卦歌诀：<br/>乾三连、坤六断、震仰盂、艮覆碗、离中虚、坎中满、兑上缺、巽下断。</div>
+    <p/>
+
+    <div style="float:left;">
+      开始断卦：
+      <div style="background:#8e8250;margin:0;width:32rem;display:wrap">
+        <p/>
+        <div>
+          事情是否已开始？
+          <select v-model="bit1">
+      <option v-for="option in options" :key="option.value" :value="option.value">
+        {{ option.text }}
+      </option>
+    </select>
+        </div>
+        <p/>
+
+        <div>
+          是否已查明需求？
+          <select v-model="bit2">
+      <option v-for="option in options" :key="option.value" :value="option.value">
+        {{ option.text }}
+      </option>
+    </select>
+        </div>
+        <p/>
+
+        <div>
+          是否已有方法执行？
+          <select v-model="bit3">
+      <option v-for="option in options" :key="option.value" :value="option.value">
+        {{ option.text }}
+      </option>
+    </select>
+        </div>
+        <p/>
+
+        <div>
+          物力是否可支撑？
+          <select v-model="bit4">
+      <option v-for="option in options" :key="option.value" :value="option.value">
+        {{ option.text }}
+      </option>
+    </select>
+        </div>
+        <p/>
+
+        <div>
+          是否平稳运作？
+          <select v-model="bit5">
+      <option v-for="option in options" :key="option.value" :value="option.value">
+        {{ option.text }}
+      </option>
+    </select>
+        </div>
+        <p/>
+
+        <div>
+          是否正在解决？
+          <select v-model="bit6">
+      <option v-for="option in options" :key="option.value" :value="option.value">
+        {{ option.text }}
+      </option>
+    </select>
+        </div>
+        <p/>
+
+      </div>
+
+      <div>
+        <div>
+          <button type="clear" @click="clear">清除</button>
+          <button type="submit" @click="submit">预测</button>
+        </div>
+        <p/>
+        <div v-html="resultText"></div>
+      </div>
+    </div>
+
+  </div>
+  <script type="text/javascript" src="./js/sweetalert2.all.min.js"></script>
+  <script type="text/javascript" src="./js/vue.min.js"></script>
+  <script type="text/javascript" src="./js/main.js"></script>
+</body>
