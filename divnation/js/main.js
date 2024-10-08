@@ -27,8 +27,18 @@ var mainMethod = {
     mainData.resultText = '';
     alert("清除成功");
   },
+  rsum: function() {
+    mainData.result =
+      (mainData.bit4 << 0) |
+      (mainData.bit5 << 1) |
+      (mainData.bit6 << 2) |
+      (mainData.bit1 << 3) |
+      (mainData.bit2 << 4) |
+      (mainData.bit3 << 5);
+  },
   sum: function() {
-    mainData.result = mainData.bit1 |
+    mainData.result =
+      (mainData.bit1 << 0) |
       (mainData.bit2 << 1) |
       (mainData.bit3 << 2) |
       (mainData.bit4 << 3) |
@@ -361,8 +371,12 @@ var mainMethod = {
     return "未成卦"
   },
   showMsg: function(val) {
-    mainData.resultText = "<a href='https://baike.baidu.com/item/%E6%98%93%E7%BB%8F%E5%85%AD%E5%8D%81%E5%9B%9B%E5%8D%A6/323637?fr=ge_ala'>资料引用</a><br/><br/>" + this.bdDivnation(val);
+    mainData.resultText = "卦辞：<a href='https://baike.baidu.com/item/%E6%98%93%E7%BB%8F%E5%85%AD%E5%8D%81%E5%9B%9B%E5%8D%A6/323637?fr=ge_ala'>百度百科</a><br/><br/>" + this.bdDivnation(val);
 
+  },
+  revers: function() {
+    this.rsum();
+    this.showMsg(mainData.result);
   },
   submit: function() {
     this.sum();

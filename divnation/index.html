@@ -85,7 +85,7 @@
         <p/>
 
         <div>
-          当前运作是否平稳？
+          当前是否已平稳？
           <select v-model="bit5">
       <option v-for="option in options" :key="option.value" :value="option.value">
         {{ option.text }}
@@ -109,6 +109,7 @@
       <div>
         <div>
           <button type="clear" @click="clear">清除</button>
+          <button type="revers" @click="revers">反客</button>
           <button type="submit" @click="submit">预测</button>
         </div>
         <p/>
