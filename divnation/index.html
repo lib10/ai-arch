@@ -42,7 +42,7 @@
 
     <div style="float:left;">
       开始断卦：
-      <div style="background:#8e8250;margin:0;width:32rem;display:wrap">
+      <div>
         <p/>
         <div>
           事情是否已开始？
@@ -55,7 +55,7 @@
         <p/>
 
         <div>
-          是否已查明需求？
+          需求是否已查明？
           <select v-model="bit2">
       <option v-for="option in options" :key="option.value" :value="option.value">
         {{ option.text }}
@@ -65,7 +65,7 @@
         <p/>
 
         <div>
-          是否已有方法执行？
+          方案是否讨论过？
           <select v-model="bit3">
       <option v-for="option in options" :key="option.value" :value="option.value">
         {{ option.text }}
@@ -75,7 +75,7 @@
         <p/>
 
         <div>
-          物力是否可支撑？
+          资源是否可支撑？
           <select v-model="bit4">
       <option v-for="option in options" :key="option.value" :value="option.value">
         {{ option.text }}
@@ -85,7 +85,7 @@
         <p/>
 
         <div>
-          是否平稳运作？
+          运作是否平稳？
           <select v-model="bit5">
       <option v-for="option in options" :key="option.value" :value="option.value">
         {{ option.text }}
@@ -95,7 +95,7 @@
         <p/>
 
         <div>
-          是否正在解决？
+          行动正在进行？
           <select v-model="bit6">
       <option v-for="option in options" :key="option.value" :value="option.value">
         {{ option.text }}
