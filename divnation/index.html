@@ -34,10 +34,13 @@
 
 <body>
   <div id="app" v-vloak>
-    <div> 声明：本程序仅供娱乐用途，不可做为事实依据。</div>
+    <div>八卦预测</div>
     <p/>
 
-    <div>朱熹八卦歌诀：<br/>乾三连、坤六断、震仰盂、艮覆碗、离中虚、坎中满、兑上缺、巽下断。</div>
+    <div>声明：本程序仅供娱乐用途，不可做为事实依据。</div>
+    <p/>
+
+    <div>朱熹歌诀：<br/>乾三连、坤六断、震仰盂、艮覆碗、离中虚、坎中满、兑上缺、巽下断。</div>
     <p/>
 
     <div style="float:left;">
@@ -45,7 +48,7 @@
       <div>
         <p/>
         <div>
-          人心是否顺应？
+          人心是否足够？
           <select v-model="bit1">
       <option v-for="option in options" :key="option.value" :value="option.value">
         {{ option.text }}
@@ -75,7 +78,7 @@
         <p/>
 
         <div>
-          资源是否足够？
+          资源是否到位？
           <select v-model="bit4">
       <option v-for="option in options" :key="option.value" :value="option.value">
         {{ option.text }}
