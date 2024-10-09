@@ -12,7 +12,7 @@ var mainData = {
   bit4: 0,
   bit5: 0,
   bit6: 0,
-  result: 0,
+  result: [],
   resultText: "",
 };
 var mainMethod = {
@@ -23,26 +23,26 @@ var mainMethod = {
     mainData.bit4 = 0;
     mainData.bit5 = 0;
     mainData.bit6 = 0;
-    mainData.result = 0;
+    mainData.result = [];
     mainData.resultText = '';
   },
   rsum: function() {
-    mainData.result =
+    mainData.result.push(
       (mainData.bit4 << 0) |
       (mainData.bit5 << 1) |
       (mainData.bit6 << 2) |
       (mainData.bit1 << 3) |
       (mainData.bit2 << 4) |
-      (mainData.bit3 << 5);
+      (mainData.bit3 << 5));
   },
   sum: function() {
-    mainData.result =
+    mainData.result.push(
       (mainData.bit1 << 0) |
       (mainData.bit2 << 1) |
       (mainData.bit3 << 2) |
       (mainData.bit4 << 3) |
       (mainData.bit5 << 4) |
-      (mainData.bit6 << 5);
+      (mainData.bit6 << 5));
   },
   bdDivnation: function(val) {
     switch (val) {
@@ -369,9 +369,11 @@ var mainMethod = {
     }
     return "未成卦"
   },
-  showMsg: function(val) {
-    mainData.resultText = "卦辞：<a href='https://baike.baidu.com/item/%E6%98%93%E7%BB%8F%E5%85%AD%E5%8D%81%E5%9B%9B%E5%8D%A6/323637?fr=ge_ala'>百度百科</a><br/><br/>" + this.bdDivnation(val);
-
+  showMsg: function(vals) {
+    mainData.resultText = "卦辞来源：<a href='https://baike.baidu.com/item/%E6%98%93%E7%BB%8F%E5%85%AD%E5%8D%81%E5%9B%9B%E5%8D%A6/323637?fr=ge_ala'>百度百科</a><br/><br/>"
+    for (var i = 0; i < vals.length; i++) {
+      mainData.resultText += this.bdDivnation(vals[i]) + "<br/><br/>";
+    }
   },
   revers: function() {
     this.rsum();
