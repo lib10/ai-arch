@@ -25,7 +25,6 @@ var mainMethod = {
     mainData.bit6 = 0;
     mainData.result = 0;
     mainData.resultText = '';
-    alert("清除成功");
   },
   rsum: function() {
     mainData.result =
@@ -107,7 +106,7 @@ var mainMethod = {
           "中中卦<br/>" +
           "象曰：虎落陷坑不堪言，进前容易退后难，谋望不遂自己便，疾病口舌事牵连。<br/>" +
           "这个卦是异卦（下坤上乾）相叠，其结构同泰卦相反，系阳气上升，阴气下降，天地不交，万物不通。它们彼此为“综卦”，表明泰极而否，否极泰来，互为因果。";
-      case 0b10111:
+      case 0b101111:
         return "天火同人（同人卦）上下和同<br/>" +
           "中上卦<br/>" +
           "象曰：心中有事犯猜疑，谋望从前不着实，幸遇明人来指引，诸般忧闷自消之。<br/>" +

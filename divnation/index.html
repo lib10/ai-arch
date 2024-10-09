@@ -34,7 +34,7 @@
 
 <body>
   <div id="app" v-vloak>
-    <div> 八卦预测，仅供测试与娱乐用途.</div>
+    <div> 声明：本程序仅供娱乐用途，不可做为事实依据。</div>
     <p/>
 
     <div>朱熹八卦歌诀：<br/>乾三连、坤六断、震仰盂、艮覆碗、离中虚、坎中满、兑上缺、巽下断。</div>
@@ -45,7 +45,7 @@
       <div>
         <p/>
         <div>
-          舆论是否会支持？
+          人心是否顺应？
           <select v-model="bit1">
       <option v-for="option in options" :key="option.value" :value="option.value">
         {{ option.text }}
@@ -55,7 +55,7 @@
         <p/>
 
         <div>
-          需求是否已确认？
+          需求是否确认？
           <select v-model="bit2">
       <option v-for="option in options" :key="option.value" :value="option.value">
         {{ option.text }}
@@ -65,7 +65,7 @@
         <p/>
 
         <div>
-          方案是否已沟通？
+          方案是否达成？
           <select v-model="bit3">
       <option v-for="option in options" :key="option.value" :value="option.value">
         {{ option.text }}
@@ -75,7 +75,7 @@
         <p/>
 
         <div>
-          资源是否可支撑？
+          资源是否足够？
           <select v-model="bit4">
       <option v-for="option in options" :key="option.value" :value="option.value">
         {{ option.text }}
@@ -85,7 +85,7 @@
         <p/>
 
         <div>
-          当前是否已平稳？
+          运行是否平稳？
           <select v-model="bit5">
       <option v-for="option in options" :key="option.value" :value="option.value">
         {{ option.text }}
@@ -95,7 +95,7 @@
         <p/>
 
         <div>
-          当前是否在行动？
+          行动是否展开？
           <select v-model="bit6">
       <option v-for="option in options" :key="option.value" :value="option.value">
         {{ option.text }}
