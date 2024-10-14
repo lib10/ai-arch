@@ -33,7 +33,7 @@
 </head>
 
 <body>
-  <div id="app" v-vloak>
+  <div id="app" v-cloak>
     <div>八卦预测</div>
     <p/>
 
@@ -48,7 +48,7 @@
       <div>
         <p/>
         <div>
-          势头是否存在？
+          事情是否符合道义？
           <select v-model="bit1">
       <option v-for="option in options" :key="option.value" :value="option.value">
         {{ option.text }}
@@ -58,7 +58,7 @@
         <p/>
 
         <div>
-          需求是否确认？
+          客方需求是否存在？
           <select v-model="bit2">
       <option v-for="option in options" :key="option.value" :value="option.value">
         {{ option.text }}
@@ -68,7 +68,7 @@
         <p/>
 
         <div>
-          方案是否达成？
+          方案是否双方达成？
           <select v-model="bit3">
       <option v-for="option in options" :key="option.value" :value="option.value">
         {{ option.text }}
@@ -78,7 +78,7 @@
         <p/>
 
         <div>
-          资源是否到位？
+          主方资源是否到位？
           <select v-model="bit4">
       <option v-for="option in options" :key="option.value" :value="option.value">
         {{ option.text }}
@@ -88,7 +88,7 @@
         <p/>
 
         <div>
-          运行是否平稳？
+          主方运行是否平稳？
           <select v-model="bit5">
       <option v-for="option in options" :key="option.value" :value="option.value">
         {{ option.text }}
@@ -98,7 +98,7 @@
         <p/>
 
         <div>
-          变动是否发生？
+          主方运行是否变动？
           <select v-model="bit6">
       <option v-for="option in options" :key="option.value" :value="option.value">
         {{ option.text }}
